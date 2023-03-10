@@ -1,12 +1,11 @@
 let firstCard = 10;
-let secondCard = 11;
+let secondCard = 4;
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
 let message = "";
 let messageEl = document.getElementById("message-el");
-// let sumEl = document.getElementById("sum-el");
-let sumEl = document.querySelector(".sum-el");
+let sumEl = document.getElementById("sum-el");
 
 let cardsEl = document.getElementById("cards-el");
 
@@ -22,6 +21,13 @@ function startGame() {
     message = "You're out of the game!";
     isAlive = false;
   }
-  // 2. Display the message in the messageEl using messageEl.textContent
+
   messageEl.textContent = message;
+}
+
+function newCard() {
+  console.log("Drawing a new card from the deck!");
+  let card = 7;
+  sum += card;
+  startGame();
 }
